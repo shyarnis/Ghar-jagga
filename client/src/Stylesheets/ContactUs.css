@@ -1,0 +1,13 @@
+.ContactForm{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+    width:40%;
+}
+.ContactForm > input{
+    margin-bottom: 1.5em;
+}
+
+.ContactForm > h3{
+    margin-bottom: 1em;
+}

@@ -1,16 +1,29 @@
-require('dotenv').config()
-const express = require("express")
-const app = express()
-const mongoose = require("mongoose")
+const express = require("express");
+const cors = require("cors");
+const app = express();
 
-const PORT = process.env.PORT
-const HOSTNAME = process.env.HOSTNAME
+//==========================================MIDDLEWARE=========================================
+app.use(cors());
+app.use(
+  express.urlencoded({
+    extended: false,
+  })
+);
+app.use(express.json());
 
-mongoose.connect(process.env.DATABASE_URL)
-const db = mongoose.connection
-db.on('error', (error) => console.error(error))
-db.once('open', () => { console.log("Connected to the Database")})
+//======================================ROUTE CONSTANTS========================================
+const houseListingRoute = require("./Routes/HouseListing/HouseListing");
+const houseFetchRoute = require("./Routes/HouseFetchRoutes/HouseFetch");
+const { emailRouter } = require("./Routes/EmailRoute/email");
 
+//======================================ROUTES=================================================
+app.use("/housing", houseListingRoute);
+app.use("/email", emailRouter);
+app.use("/api", houseFetchRoute);
+
+//=======================================SERVER ENTRY==========================================
+
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-	console.log(`Server is started at http://${HOSTNAME}:${PORT}`)
-})
+  console.log(`server started on PORT ${PORT}`);
+});

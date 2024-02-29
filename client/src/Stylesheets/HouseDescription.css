@@ -1,0 +1,48 @@
+.HouseDescription_container{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.HouseDescription__leftContainer > h4, h3{
+    margin-bottom: .5em;
+    font-weight: 500;
+}
+
+.HouseDescription_icons{
+    margin-top: 1em;
+    display: flex;
+    margin-bottom: 2.5em;
+}
+.bedding,
+.bathrooms{
+    display: flex;
+    align-items: center;
+}
+
+.bathrooms{
+    margin-left: .8em;
+}
+.House_Description{
+    width: 70%;
+}
+
+.Form{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2em;
+    width:200%;
+}
+
+.Form > input{
+    margin-bottom: 1.5em;
+}
+
+.Form > h3{
+    margin-bottom: 1em;
+}
+.img{
+    width:  500px;
+    height: 400px;
+    object-fit: cover;
+}

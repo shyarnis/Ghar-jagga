@@ -1,0 +1,9 @@
+.MobileNav_container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.MobileNav_container > img{
+    width: 100%;
+}

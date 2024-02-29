@@ -1,0 +1,23 @@
+.DesktopNav_container{
+    display: flex;
+    justify-content: space-between;
+    background-color: none;
+}
+
+.DesktopNavLeft_container{
+    padding-left: 3em;
+    width: 50%;
+}
+
+.logo{
+    width: 30%;
+}
+
+.DesktopNavRight_container{
+    display: flex;
+    align-items: center;
+}
+
+.DesktopNavRight_container > a{
+    margin-right: 3em;
+}
